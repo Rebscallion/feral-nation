@@ -1,0 +1,819 @@
+@import url("https://use.typekit.net/ukd7edp.css");
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: komet, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+//variables
+$navy: #002B38;
+$nav: #C0D7DE;
+$lBlue: #E5FDFF;
+$pink: #FFCCC7;
+$lPink: #F5EAEA;
+
+$subheader: 700;
+$paraFont: century-gothic, sans-serif;
+
+button {
+    background-color: $lBlue;
+    border: 1px solid $navy;
+    color: $navy;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: $lBlue;
+    border: 1px solid $navy;
+    color: $navy;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 25px;
+    height: 41px;
+    width: 93px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button:hover,
+.button:hover {
+    font-weight: 700;
+    background-color: $navy;
+    border: 1px solid $lBlue;
+    color: $lBlue;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    background-color: $pink;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+    float: right;
+    color: $navy;
+    text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+.subnavbtn {
+    margin-bottom: 68px;
+}
+
+#about-hero,
+#event-hero {
+    img {
+        display: none;
+    }
+}
+
+// +++++ Nav Bar +++++
+#navbar {
+    height: 80px;
+    display: flex;
+    background-color: $nav;
+
+    #logo {
+        display: flex;
+        width: 90%;
+
+        img {
+            height: 60px;
+            margin: 10px 25px;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: $navy;
+            line-height: 80px;
+        }
+    }
+
+    #desktop-menu {
+        display: none;
+    }
+
+    #nav-icon {
+        width: 10%;
+        color: $navy;
+        font-size: 30px;
+        text-align: right;
+        line-height: 80px;
+        padding-right: 20px;
+    }
+}
+
+#mobile-menu {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 34px;
+    z-index: 3;
+    background-color: $nav;
+
+    li {
+        margin-bottom: 50px;
+        color: $navy;
+
+        svg {
+            height: 24px;
+            width: 22px;
+        }
+    }
+
+    #close-nav-menu {
+        position: absolute;
+        top: 18px;
+        right: 15px;
+        font-size: 60px;
+        border: 0;
+        background-color: $nav;
+        color: $navy;
+    }
+}
+
+#desktop-menu ul li {
+    display: inline-block;
+}
+
+// +++++ Footer +++++
+#footer {
+    background-color: $pink;
+    margin-top: 35px;
+    padding: 3px 0 25px 0;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    color: $navy;
+
+    h3 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+
+    hr {
+        border-top: 2px solid white;
+        margin-bottom: 6px;
+        width: 60px
+    }
+
+    p {
+        font-family: century-gothic, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 5px;
+    }
+
+    #contact,
+    #about {
+        grid-column: 1/5;
+        display: flex;
+        padding-top: 22px;
+        padding-left: 26px;
+        flex-direction: column;
+    }
+
+    #events,
+    #donate {
+        grid-column: 5/7;
+        display: flex;
+        padding-top: 22px;
+        flex-direction: column;
+    }
+
+    #logo-box {
+        grid-column: 7/9;
+        grid-row: 1/3;
+        align-items: center;
+
+        img {
+            margin: 20px 0 22px 0;
+            align-items: left;
+            height: 60px;
+        }
+    }
+}
+
+// +++++ Home Page +++++
+//Hero Image
+#hero {
+    overflow: hidden;
+    background-image: url(../img/Hero.png);
+    background-position: -104px;
+    background-size: cover;
+    height: 290px;
+    color: $navy;
+
+    #hero-text {
+        width: 329px;
+        font-size: 15px;
+        padding: 42px 25px;
+        text-shadow: 0px 0px 8px rgb(255, 255, 255);
+
+
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        button {
+            margin-top: 25px;
+            height: 41px;
+            width: 93px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+//upcoming adoptions gallery
+#to-adopt {
+    width: 100%;
+    color: $navy;
+
+    h2 {
+        padding-top: 35px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        #post {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 28px;
+
+            img {
+                height: 103px;
+                width: 103px;
+                object-fit: cover;
+                border-radius: 100px;
+                cursor: pointer;
+            }
+
+            h3 {
+                font-family: $paraFont;
+                font-size: 16px;
+                font-weight: 400;
+                margin-top: 10px;
+                cursor: pointer;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// +++++ About Adopting +++++
+#about-adoption {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 5px;
+
+    .grid-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $navy;
+
+        h2 {
+            font-size: 16px;
+            margin: 35px 0 18px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            width: 240px;
+            margin-top: 20px;
+
+            li {
+                font-size: 13px;
+                font-family: $paraFont;
+            }
+        }
+    }
+
+}
+
+#faq {
+    margin-top: 30px;
+
+    h2 {
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .accordion {
+        border-bottom: 1px solid $navy;
+        margin-top: 20px;
+        margin-left: 1px;
+        width: 99.5%;
+
+        .accordion__button {
+            background-color: $lBlue;
+            border: 1px solid $navy;
+            border-bottom: none;
+            cursor: pointer;
+            padding: 18px;
+            text-align: left;
+            color: $navy;
+            font-size: 16px;
+        }
+
+        .accordion__panel {
+            padding: 0 20px 20px 20px;
+            background-color: $lBlue;
+            border-left: 1px solid $navy;
+            border-right: 1px solid $navy;
+            animation: fadein 0.35s ease-in;
+            color: $navy;
+            font-size: 14px;
+        }
+    }
+}
+
+// +++++ Upcoming Events +++++
+#event-gallery {
+    width: 100%;
+    color: $navy;
+
+    h2 {
+        padding-top: 35px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        #event {
+            display: flex;
+            flex-direction: column;
+            margin: 28px 16px;
+            padding: 10px;
+            background-color: $navy;
+            color: white;
+
+            img {
+                height: 170px;
+                width: 250px;
+                object-fit: cover;
+            }
+
+            hr {
+                border-color: white;
+                margin: 8px 0;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                margin-top: 12px;
+            }
+
+            h4 {
+                font-weight: 400;
+                font-size: 16px;
+                text-align: left;
+            }
+
+            p {
+                font-family: $paraFont;
+                font-size: 13px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+// +++++ Donate Page +++++
+#give-little {
+    margin: 40px;
+
+    #product-img {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    h2 {
+        padding-top: 35px;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    #description {
+        font-size: 13px;
+        font-family: $paraFont;
+        margin-bottom: 30px;
+    }
+}
+
+// +++++ Cat Profile Page +++++
+#profile {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    .content {
+        width: 80vw;
+        color: $navy;
+
+        img {
+            width: 100%;
+            border-radius: 10%;
+            margin-bottom: 10px;
+        }
+
+        #name-box {
+            display: flex;
+            margin-bottom: 5px;
+            align-items: flex-end;
+            width: 100%;
+
+            h3 {
+                font-size: 25px;
+                font-weight: 400;
+                margin-right: 20px;
+            }
+
+            .personality-pill {
+                padding: 3px 6px;
+                display: inline-block;
+                background-color: $pink;
+                color: $navy;
+                border-radius: 10px;
+                font-size: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        h4 {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        #breed {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+            border-bottom: 2px solid $navy;
+
+            h5 {
+                margin-right: 10px;
+                padding-bottom: 4px;
+            }
+        }
+    }
+}
+
+// =========================
+//+++++ Larger screens +++++
+// =========================
+@media screen and (min-width:1020px) {
+
+    #about-hero,
+    #event-hero {
+        img {
+            display: block;
+            width: 100vw;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    // +++++ Nav Bar +++++
+    #nav-icon {
+        display: none;
+    }
+
+    #navbar {
+        height: 100px;
+        display: flex;
+
+        #logo {
+            width: 40%;
+            display: flex;
+
+            img {
+                height: 75px;
+                margin: 13px 32px;
+            }
+
+            h1 {
+                font-size: 32px;
+                line-height: 100px;
+            }
+        }
+
+        #desktop-menu {
+            display: block;
+            width: 60%;
+            margin-right: 20px;
+
+            #links {
+                display: flex;
+                list-style: none;
+                margin-top: 30px;
+                justify-content: flex-end;
+
+                .subnav {
+                    float: left;
+                    overflow: hidden;
+                }
+
+                .subnav .subnavbtn {
+                    color: $navy;
+                    line-height: 38px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    border: none;
+                    outline: none;
+                    background-color: inherit;
+                    font-family: inherit;
+                    margin-right: 20px
+                }
+
+                a {
+                    height: 38px;
+                    padding: 0 10px;
+                    margin-right: 16px;
+                    text-align: center;
+                    line-height: 38px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $navy;
+
+                    svg {
+                        height: 12px;
+                        color: $navy;
+                    }
+                }
+
+                #donate-bttn {
+                    background-color: $lBlue;
+                    border-radius: 20px;
+                    line-height: 38px;
+                    padding: 0 10px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    // +++++ Footer +++++
+    #footer {
+        padding: 3px 0 25px 0;
+        display: flex;
+        justify-content: space-evenly;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        #contact,
+        #events,
+        #about,
+        #donate {
+            padding-top: 38px;
+        }
+
+        #logo-box {
+            text-align: center;
+
+            img {
+                margin: 20px 0 10px 0;
+                height: 87px;
+            }
+        }
+    }
+
+    // +++++ Home Page +++++
+    //Hero Image
+    #hero {
+        height: 368px;
+        background-position: 0;
+
+        #hero-text {
+            width: 489px;
+            font-size: 20px;
+            padding: 56px 98px;
+
+
+            h2 {
+                font-size: 44px;
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-top: 30px;
+                height: 60px;
+                width: 135px;
+                padding: 15px;
+                font-size: 24px;
+            }
+        }
+    }
+
+    //upcoming adoptions gallery
+    #to-adopt {
+
+        h2 {
+            padding-top: 60px;
+            font-size: 30px;
+        }
+
+        #gallery {
+            grid-template-columns: repeat(4, 1fr);
+            margin: 35px 90px 60px 90px;
+
+            #post {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                img {
+                    height: 136px;
+                    width: 136px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                    margin-top: 12px;
+                }
+            }
+        }
+    }
+
+    // +++++ About Adopting +++++
+    #about-adoption {
+        grid-template-columns: repeat(3, 1fr);
+        padding-top: 40px;
+
+        .grid-item {
+            img {
+                height: 190px;
+                object-fit: cover;
+            }
+
+            h2 {
+                font-size: 18px;
+                margin: 0 0 22px 0;
+            }
+
+            ul {
+                margin-top: 28px;
+
+                li {
+                    font-size: 13px;
+                }
+            }
+        }
+
+    }
+
+    #faq {
+        margin-top: 30px;
+
+        .accordion {
+            width: 774px;
+            margin: auto;
+            margin-top: 22px;
+            margin-bottom: 60px;
+        }
+    }
+
+    // +++++ Upcoming Events +++++
+    #event-gallery {
+        width: 100%;
+        margin-top: 20px;
+
+        h2 {
+            display: none;
+        }
+
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-left: 20px;
+            margin-right: 20px;
+
+            #event {
+                margin: 30px;
+                padding: 10px;
+
+                img {
+                    height: 157px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // +++++ Donate Page +++++
+    #give-little {
+        height: 60vh;
+        width: 60%;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    // +++++ Cat Profile Page +++++
+    #profile {
+        margin-top: 40px;
+        justify-content: center;
+
+        .content {
+            display: flex;
+            flex-wrap: nowrap;
+            color: $navy;
+
+            img {
+                height: 500px;
+                width: 50%;
+                object-fit: cover;
+                border-radius: 10%;
+                margin-bottom: 10px;
+            }
+
+            #bio {
+                margin-left: 30px;
+                width: 50%;
+
+                #name-box {
+                    margin-bottom: 8px;
+
+                    h3 {
+                        font-size: 28px;
+                    }
+
+                    .personality-pill {
+                        padding: 5px 8px;
+                        font-size: 15px;
+                    }
+                }
+
+                #breed h5 {
+                    padding-bottom: 8px;
+                    font-size: 14px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
